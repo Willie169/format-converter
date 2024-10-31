@@ -3,7 +3,10 @@
 const fs = require('fs');
 const showdown = require('showdown');
 
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({
+  ghCompatibleHeaderId: true,
+  headerLevelStart: 1,
+});
 
 fs.readFile('README.md', 'utf8', (err, markdownContent) => {
     if (err) {
