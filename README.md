@@ -9,8 +9,8 @@ Format Converter is a collection of code that:
 The source and target languages are specified in the file names of each code file.\
 The commands to install the dependencies of a code file are placed in the comments at the beginning of it.
 
-## Default Name
-The default names are listed below:
+## Default File Name
+The default file names are listed below:
 
 * HTML \- index.html
 * Markdown \- README.md
