@@ -1,16 +1,16 @@
 # Format Converter
 
 Format Converter is a collection of code that:
-- Convert between different markup languages
-- Generate commonly used stuff such as table of contents
+- Convert between different markup languages.
+- Generate commonly used stuff such as table of contents.
 
 ## Specifications
 
-The source and target languages are specified in the file names of each code file.\
-The commands to install the dependencies of a code file are placed in the comments at the beginning of it.
+- The source and target languages are specified in the file names of each code file.
+- The commands to install the dependencies of a code file are placed in the comments at the beginning of it.
 
-## Default I/O File Name
-The default I/O file names are listed below:
+## Default I/O File Names
+The default I/O file names are:
 
 * HTML \- index.html
 * Markdown \- README.md
