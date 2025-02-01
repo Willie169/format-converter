@@ -9,7 +9,7 @@ fs.readFile('README.md', 'utf8', (err, data) => {
     return;
   }
 
-  const tocContent = toc(markdown, {
+  const tocContent = toc(data, {
   filter: (str, ele) => ele.lvl === 2 || ele.lvl === 3
 }).content;
 
