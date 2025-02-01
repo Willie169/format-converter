@@ -6,6 +6,7 @@ const showdown = require('showdown');
 const converter = new showdown.Converter({
   ghCompatibleHeaderId: true,
   headerLevelStart: 1,
+  ghCodeBlocks: true
 });
 
 fs.readFile('README.md', 'utf8', (err, markdownContent) => {
