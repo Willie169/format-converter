@@ -6,7 +6,7 @@ Format Converter is a collection of code that:
 
 ## Specifications
 
-- The source and target languages are specified in the file names of each code file.
+- The purposes of the code are specified in the file names of each code file.
 - The commands to install the dependencies of a code file are placed in the comments at the beginning of it.
 
 ## Default I/O File Names
