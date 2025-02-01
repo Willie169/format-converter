@@ -14,5 +14,4 @@ The default I/O file names are:
 
 * HTML \- index.html
 * Markdown \- README.md
-* LaTeX \- document.tex
 * Table of Contents \- TOC.extension_name
