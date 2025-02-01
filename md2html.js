@@ -1,28 +1,21 @@
-// npm install showdown
+// npm install marked
 
 const fs = require('fs');
-const showdown = require('showdown');
+const marked = require('marked');
 
-const converter = new showdown.Converter({
-  ghCompatibleHeaderId: true,
-  headerLevelStart: 1,
-  ghCodeBlocks: true
-});
-
-fs.readFile('README.md', 'utf8', (err, markdownContent) => {
+fs.readFile('README.md', 'utf8', (err, data) => {
     if (err) {
-        console.error('Error reading the file:', err);
+        console.error(err);
         return;
     }
 
-    const htmlContent = converter.makeHtml(markdownContent);
+    const html = marked(data);
 
-    fs.writeFile('index.html', htmlContent, (err) => {
+    fs.writeFile('index.html', html, (err) => {
         if (err) {
-            console.error('Error writing the file:', err);
+            console.error(err);
             return;
         }
-
         console.log('HTML file has been saved as index.html');
     });
 });
