@@ -11,7 +11,7 @@ fs.readFile('README.md', 'utf8', (err, data) => {
 
   const tocContent = toc(data, {
   filter: (str, ele) => ele.lvl === 2 || ele.lvl === 3
-}).content;
+}).content.replaceAll("\n  ","\n").substring(2).replaceAll("  +","  *");
 
   fs.writeFile('TOC.md', tocContent, 'utf8', (writeErr) => {
     if (writeErr) {

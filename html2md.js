@@ -9,7 +9,7 @@ fs.readFile('index.html', 'utf8', (err, htmlContent) => {
         return;
     }
 
-    const markdownContent = NodeHtmlMarkdown.translate(htmlContent).replace(/```\n([\s\S]+?)\n\n```/, "```\n$1\n```");
+    const markdownContent = NodeHtmlMarkdown.translate(htmlContent).replaceAll(/```\n([\s\S]+?)\n\n```/, "```\n$1\n```");
 
     fs.writeFile('README.md', markdownContent, 'utf8', (err) => {
         if (err) {
