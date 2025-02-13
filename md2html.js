@@ -1,7 +1,10 @@
-// npm install marked
+// npm install marked marked-gfm-heading-id
 
 const fs = require('fs');
-const { marked } = require('marked');
+const marked = require("marked");
+const gfmHeadingId = require("marked-gfm-heading-id");
+
+marked.use(gfmHeadingId());
 
 try {
   const markdown = fs.readFileSync('README.md', 'utf8');
