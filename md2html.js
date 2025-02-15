@@ -1,8 +1,8 @@
 // npm install marked marked-gfm-heading-id
 
 const fs = require('fs');
-const marked = require("marked");
-const gfmHeadingId = require("marked-gfm-heading-id");
+const { marked } = require("marked");
+const { gfmHeadingId } = require("marked-gfm-heading-id");
 
 marked.use(gfmHeadingId());
 
