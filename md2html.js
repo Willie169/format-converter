@@ -1,4 +1,4 @@
-// npm install marked marked-gfm-heading-id
+// npm i marked marked-gfm-heading-id
 
 const fs = require('fs');
 const { marked } = require("marked");
@@ -9,7 +9,7 @@ marked.use(gfmHeadingId());
 try {
   const markdown = fs.readFileSync('README.md', 'utf8');
   const htmlContent = marked(markdown);
-  
+
   fs.writeFileSync('index.html', htmlContent);
   console.log('HTML file has been saved as index.html');
 } catch (err) {

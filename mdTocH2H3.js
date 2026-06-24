@@ -1,4 +1,4 @@
-// npm install markdown-toc
+// npm i markdown-toc
 
 const fs = require('fs');
 const toc = require('markdown-toc');

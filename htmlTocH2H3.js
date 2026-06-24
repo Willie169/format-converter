@@ -1,4 +1,4 @@
-// npm install jsdom
+// npm i jsdom
 
 const fs = require('fs');
 const { JSDOM } = require('jsdom');
@@ -30,7 +30,7 @@ fs.readFile('index.html', 'utf8', (err, data) => {
       if (currentH2) {
         tocListHTML += '</ul>\n</li>\n';
       }
-      
+
       tocListHTML += `<li class="h2"><a href="#${header.id}">${header.textContent}</a>\n<ul>\n`;
       currentH2 = header;
     } else if (header.tagName.toLowerCase() === 'h3' && currentH2) {
